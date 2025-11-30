@@ -12,6 +12,8 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import com.reactionservice.crewproject.domain.common.BaseTimeEntity;
+
 /**
  * 일일 장비 등록 테이블입니다.
  */
@@ -20,7 +22,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "daily_equipments")
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class DailyEquipment {
+public class DailyEquipment extends BaseTimeEntity {
 
 	/**
 	 * 식별값

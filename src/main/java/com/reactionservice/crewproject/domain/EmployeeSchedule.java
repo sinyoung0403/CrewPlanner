@@ -13,6 +13,8 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import com.reactionservice.crewproject.domain.common.BaseTimeEntity;
+
 /**
  * 직원 일정 테이블입니다.
  */
@@ -21,7 +23,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "employee_schedules")
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class EmployeeSchedule {
+public class EmployeeSchedule extends BaseTimeEntity {
 
 	/**
 	 * 직원 일정 식별자

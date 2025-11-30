@@ -12,6 +12,8 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import com.reactionservice.crewproject.domain.common.BaseTimeEntity;
+
 /**
  * 사업장 테이블입니다.
  */
@@ -19,7 +21,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "stores")
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class Store {
+public class Store extends BaseTimeEntity {
 
 	/**
 	 * 사업장 식별자

@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    active: local
+  datasource:
+    url: jdbc:mysql://localhost:3306/crewSchedule
+    username: root
+    password: 1111
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+#  data:
+#    redis:
+#      host: localhost
+#      port: 6379
+jwt:
+  secret:
+    key: f93h4ns0akjdhf9823hfsd8fh38hfs9sdhdsaw32fghf83sdf=

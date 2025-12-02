@@ -1,4 +1,4 @@
-package com.reactionservice.crewproject.presentation.common.response;
+package com.reactionservice.crewproject.presentation.api.common.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

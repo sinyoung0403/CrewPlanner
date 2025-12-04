@@ -13,11 +13,15 @@ import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.lang.Assert;
 import io.jsonwebtoken.security.Keys;
 
+/**
+ * Jwt Token 발급 및 검증을 위한 component 이다.
+ */
+
 @Component
 public class JwtTokenProvider {
 	private static final String BEARER_PREFIX = "Bearer ";
 	public final long ACCESS_TOKEN_EXPIRATION_MS = 1000L * 60 * 60; // 60분
-	public final long REFRESH_TOKEN_EXPIRATION_MS = 1000L * 60 * 60 * 24 * 7; // 7일
+	public static final long REFRESH_TOKEN_EXPIRATION_MS = 1000L * 60 * 60 * 24 * 7; // 7일
 
 	private Key key;
 

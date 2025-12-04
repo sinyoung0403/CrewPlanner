@@ -24,22 +24,31 @@ import com.reactionservice.crewproject.domain.common.BaseTimeEntity;
 public class Store extends BaseTimeEntity {
 
 	/**
-	 * 사업장 식별자
+	 * 업장 식별자
 	 */
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	/**
-	 * 사업장 주인
+	 * 업장 주인
 	 */
 	@ManyToOne
 	@JoinColumn(name = "owner_id")
 	private User owner;
 
 	/**
-	 * 상호
+	 * 업장명
 	 */
 	private String name;
 
+	/**
+	 * 주소
+	 */
+	private String address;
+
+	/**
+	 * 설명
+	 */
+	private String description;
 }

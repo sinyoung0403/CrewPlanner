@@ -5,11 +5,11 @@ import java.time.LocalDate;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.NotNull;
 
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -21,7 +21,7 @@ import com.reactionservice.crewproject.domain.common.BaseTimeEntity;
  * 직원 테이블입니다.
  */
 @Entity
-@Table (name = "employees")
+@Table(name = "employees")
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Employee extends BaseTimeEntity {
@@ -30,7 +30,7 @@ public class Employee extends BaseTimeEntity {
 	 * 직원 식별자
 	 */
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	/**
@@ -55,6 +55,7 @@ public class Employee extends BaseTimeEntity {
 	/**
 	 * 휴대폰 번호
 	 */
+	@Column(nullable = false)
 	private String phone;
 
 	/**

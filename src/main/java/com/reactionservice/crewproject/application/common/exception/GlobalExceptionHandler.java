@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import com.reactionservice.crewproject.presentation.common.response.BaseResponse;
+import com.reactionservice.crewproject.presentation.api.common.response.BaseResponse;
 
 @RestControllerAdvice
 @Slf4j

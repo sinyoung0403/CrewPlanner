@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 import com.reactionservice.crewproject.domain.common.BaseTimeEntity;
 
 /**
- * 회원 테이블
+ * 회원 테이블 입니다.
  */
 
 @Entity
@@ -23,12 +23,7 @@ import com.reactionservice.crewproject.domain.common.BaseTimeEntity;
 public class User extends BaseTimeEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long userId;
-
-	/**
-	 * 회원 이름
-	 */
-	private String name;
+	private Long id;
 
 	/**
 	 * 회원 이메일 | ID 와 같은 역할
@@ -41,8 +36,19 @@ public class User extends BaseTimeEntity {
 	private String password;
 
 	/**
+	 * 회원 이름
+	 */
+	private String name;
+
+	/**
 	 * 휴대폰 번호 -> 000-0000-0000 형식
 	 */
 	private String phone;
 
+	public User(String email, String password, String name, String phone) {
+		this.email = email;
+		this.password = password;
+		this.name = name;
+		this.phone = phone;
+	}
 }

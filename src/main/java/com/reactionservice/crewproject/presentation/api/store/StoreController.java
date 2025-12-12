@@ -62,7 +62,7 @@ public class StoreController {
 	 * @return 사업장 정보
 	 */
 
-	@GetMapping("/storeId")
+	@GetMapping("/{storeId}")
 	public ResponseEntity<BaseResponse<InfoStoreResponseDto>> findById(
 		@Auth AuthUser authUser,
 		@PathVariable Long storeId
